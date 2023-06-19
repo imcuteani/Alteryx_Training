@@ -1,2 +1,2 @@
 # Alteryx_Training
-This is repo for the Data Analytics Training with Alteryx
+This is repo for the Enterprise Data Analytics (EDA) Training with Alteryx
