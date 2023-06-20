@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.1">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="66" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="1">
+          <Name><![CDATA[Input Data ]]></Name>
+          <AnnotationText>Input Dataset
+This is the data source</AnnotationText>
+          <DefaultAnnotationText><![CDATA[Input Data ]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="unique_id" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="transaction_id" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="unformatted_date" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="customer_id" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="product_id" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="product_name" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="category_id" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="category_name" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="parent_id" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="parent_name" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="product_count" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="site_id" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="site_name" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="address" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="city" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="zip" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="latitude" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="longitude" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="site_status" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="revenue" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="gross_profit" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="costs" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="units" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="666" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ADMINU~1\AppData\Local\Temp\2\Engine_1464_eeec752d15df7243afa03b7ec39e37b5_\Engine_1464_be08e5014affe541885f2722e3290019~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>Browse</Name>
+          <AnnotationText>View Data</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+        <Position x="270" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <IsFrom value="False" />
+          <InputFieldName>unformatted_date</InputFieldName>
+          <Language>English</Language>
+          <Format>MM/dd/yyyy</Format>
+          <OutputFieldName>Date</OutputFieldName>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Convert unformatted_date From:
+MM/dd/yyyy</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="426" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Date" selected="True" description="Transaction Date" />
+            <SelectField field="unique_id" selected="True" rename="Unique_Id" />
+            <SelectField field="transaction_id" selected="True" rename="Transaction_Id" />
+            <SelectField field="unformatted_date" selected="False" rename="Transaction_Date" type="Date" size="10" />
+            <SelectField field="customer_id" selected="True" rename="Customer_Id" />
+            <SelectField field="product_id" selected="True" rename="Product_Id" />
+            <SelectField field="product_name" selected="True" rename="Product_Name" />
+            <SelectField field="category_id" selected="True" rename="Category_Id" />
+            <SelectField field="category_name" selected="True" rename="Category_Name" />
+            <SelectField field="parent_id" selected="True" rename="Parent_Id" />
+            <SelectField field="parent_name" selected="True" rename="Parent_Name" />
+            <SelectField field="product_count" selected="True" rename="Product_Count" />
+            <SelectField field="site_id" selected="True" rename="Site_Id" />
+            <SelectField field="site_name" selected="True" rename="Site_Name" />
+            <SelectField field="address" selected="True" rename="Address" />
+            <SelectField field="city" selected="True" rename="City" />
+            <SelectField field="zip" selected="True" rename="Zip" />
+            <SelectField field="latitude" selected="True" rename="Latitude" />
+            <SelectField field="longitude" selected="True" rename="Longitude" />
+            <SelectField field="site_status" selected="True" rename="Site_Status" />
+            <SelectField field="revenue" selected="True" rename="Revenue" />
+            <SelectField field="gross_profit" selected="True" rename="Gross_Profit" />
+            <SelectField field="costs" selected="True" rename="Cost" />
+            <SelectField field="units" selected="True" rename="Units" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>DataType &amp; Field Name change</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>TecaPoSData_etl1</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="62def2a6-b4bf-45a7-8412-6b8430671dbf" />
+      <Telemetry>
+        <PreviousWorkflowId value="63cc417a-7a2b-4e02-bbb2-7d9273b59996" />
+        <OriginWorkflowId value="63cc417a-7a2b-4e02-bbb2-7d9273b59996" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
