@@ -3,7 +3,7 @@
   <Nodes>
     <Node ToolID="1">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="54" y="54" />
+        <Position x="66" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -29,6 +29,9 @@ This is the data source</AnnotationText>
           <DefaultAnnotationText><![CDATA[Input Data ]]></DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="unique_id" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
@@ -61,11 +64,11 @@ This is the data source</AnnotationText>
     </Node>
     <Node ToolID="2">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="798" y="54" />
+        <Position x="666" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\ADMINU~1\AppData\Local\Temp\2\Engine_4760_b604567110dfdf41898d8710c1fde372_\Engine_4760_12cf98ac0b97f24baeac59b02b92c03c~.yxdb</TempFile>
+          <TempFile>C:\Users\ADMINU~1\AppData\Local\Temp\2\Engine_1464_eeec752d15df7243afa03b7ec39e37b5_\Engine_1464_be08e5014affe541885f2722e3290019~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -90,7 +93,7 @@ This is the data source</AnnotationText>
     </Node>
     <Node ToolID="4">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
-        <Position x="258" y="54" />
+        <Position x="270" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -111,7 +114,7 @@ MM/dd/yyyy</DefaultAnnotationText>
     </Node>
     <Node ToolID="5">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="414" y="54" />
+        <Position x="426" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -154,49 +157,6 @@ MM/dd/yyyy</DefaultAnnotationText>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
     </Node>
-    <Node ToolID="7">
-      <GuiSettings>
-        <Position x="546" y="54" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Value name="Number">False</Value>
-          <Value name="NNumber">500</Value>
-          <Value name="Percent">True</Value>
-          <Value name="NPercent">10</Value>
-          <Value name="Deterministic">False</Value>
-          <Value name="Seed">458676342</Value>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <AnnotationText>Sampling of Records 10%</AnnotationText>
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
-      </Properties>
-      <EngineSettings Macro="RandomRecords.yxmc" />
-    </Node>
-    <Node ToolID="8">
-      <GuiSettings>
-        <Position x="666" y="54" />
-      </GuiSettings>
-      <Properties>
-        <Configuration />
-        <Annotation DisplayMode="0">
-          <Name />
-          <AnnotationText>Count Records of Sampling</AnnotationText>
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
-      </Properties>
-      <EngineSettings Macro="CountRecords.yxmc" />
-    </Node>
   </Nodes>
   <Connections>
     <Connection>
@@ -209,14 +169,6 @@ MM/dd/yyyy</DefaultAnnotationText>
     </Connection>
     <Connection>
       <Origin ToolID="5" Connection="Output" />
-      <Destination ToolID="7" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="7" Connection="Output" />
-      <Destination ToolID="8" Connection="Input8" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="8" Connection="Output9" />
       <Destination ToolID="2" Connection="Input" />
     </Connection>
   </Connections>
