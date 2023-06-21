@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.1">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="510" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ADMINU~1\AppData\Local\Temp\2\Engine_6404_74a3e4349028674db2044e7f51f41a75_\Engine_6404_487250a4bd909a48841093b285e24292~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="102" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText><![CDATA[TecaPoSData ]]></AnnotationText>
+          <DefaultAnnotationText>tecaPosSmall.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="unique_id" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="transaction_id" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="unformatted_date" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="customer_id" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="product_id" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="product_name" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="category_id" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="category_name" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="parent_id" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="parent_name" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="product_count" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="site_id" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="site_name" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="address" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="city" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="zip" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="latitude" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="longitude" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="site_status" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="revenue" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="gross_profit" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="costs" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+            <Field name="units" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="270" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="revenue" action="CountDistinct" rename="CountDistinct_revenue" />
+            <SummarizeField field="product_count" action="GroupBy" rename="product_count" />
+            <SummarizeField field="gross_profit" action="Max" rename="Max_gross_profit" />
+            <SummarizeField field="product_name" action="GroupBy" rename="product_name" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>Summarize</Name>
+          <AnnotationText><![CDATA[Summarize tool for Count of Gross profits ]]></AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="1" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Summarize</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="855602b0-cc30-446c-b796-843b409bdd5d" />
+      <Telemetry>
+        <PreviousWorkflowId value="12c18d15-8f43-4e9d-823e-a25247affe70" />
+        <OriginWorkflowId value="12c18d15-8f43-4e9d-823e-a25247affe70" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

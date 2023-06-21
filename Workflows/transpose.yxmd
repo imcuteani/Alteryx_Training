@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.1">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="150" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\adminuser\AppData\Local\Alteryx\Samples\data\SampleData\Customers.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name><![CDATA[Input Data ]]></Name>
+          <AnnotationText>Customer Data</AnnotationText>
+          <DefaultAnnotationText><![CDATA[Input Data ]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="CustomerID" size="254" source="File: C:\Users\adminuser\AppData\Local\Alteryx\Samples\data\SampleData\Customers.csv" type="V_String" />
+            <Field name="Store Number" size="254" source="File: C:\Users\adminuser\AppData\Local\Alteryx\Samples\data\SampleData\Customers.csv" type="V_String" />
+            <Field name="Customer Segment" size="254" source="File: C:\Users\adminuser\AppData\Local\Alteryx\Samples\data\SampleData\Customers.csv" type="V_String" />
+            <Field name="Responder" size="254" source="File: C:\Users\adminuser\AppData\Local\Alteryx\Samples\data\SampleData\Customers.csv" type="V_String" />
+            <Field name="First Name" size="254" source="File: C:\Users\adminuser\AppData\Local\Alteryx\Samples\data\SampleData\Customers.csv" type="V_String" />
+            <Field name="Last Name" size="254" source="File: C:\Users\adminuser\AppData\Local\Alteryx\Samples\data\SampleData\Customers.csv" type="V_String" />
+            <Field name="Address" size="254" source="File: C:\Users\adminuser\AppData\Local\Alteryx\Samples\data\SampleData\Customers.csv" type="V_String" />
+            <Field name="City" size="254" source="File: C:\Users\adminuser\AppData\Local\Alteryx\Samples\data\SampleData\Customers.csv" type="V_String" />
+            <Field name="State" size="254" source="File: C:\Users\adminuser\AppData\Local\Alteryx\Samples\data\SampleData\Customers.csv" type="V_String" />
+            <Field name="Zip" size="254" source="File: C:\Users\adminuser\AppData\Local\Alteryx\Samples\data\SampleData\Customers.csv" type="V_String" />
+            <Field name="Lat" size="254" source="File: C:\Users\adminuser\AppData\Local\Alteryx\Samples\data\SampleData\Customers.csv" type="V_String" />
+            <Field name="Lon" size="254" source="File: C:\Users\adminuser\AppData\Local\Alteryx\Samples\data\SampleData\Customers.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Transpose.Transpose">
+        <Position x="306" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ErrorWarn>Warn</ErrorWarn>
+          <KeyFields>
+            <Field field="CustomerID" />
+          </KeyFields>
+          <DataFields>
+            <Field field="CustomerID" selected="False" />
+            <Field field="Store Number" selected="True" />
+            <Field field="Customer Segment" selected="False" />
+            <Field field="Responder" selected="False" />
+            <Field field="First Name" selected="True" />
+            <Field field="Last Name" selected="True" />
+            <Field field="Address" selected="True" />
+            <Field field="City" selected="True" />
+            <Field field="State" selected="True" />
+            <Field field="Zip" selected="True" />
+            <Field field="Lat" selected="True" />
+            <Field field="Lon" selected="True" />
+            <Field field="*Unknown" selected="False" />
+          </DataFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name><![CDATA[Transpose ]]></Name>
+          <AnnotationText>Transpose based on customerId</AnnotationText>
+          <DefaultAnnotationText><![CDATA[Transpose ]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTranspose" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="462" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ADMINU~1\AppData\Local\Temp\2\Engine_4344_fba9280e93d96e4ba11e2f058a02ced6_\Engine_4344_42008fe886437749a14f6b02a44f8a6a~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>transpose</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="430d39a8-d3e5-4483-8a29-783e20f32e1d" />
+      <Telemetry>
+        <PreviousWorkflowId value="68f14fe1-978e-4568-9539-cef724663d9e" />
+        <OriginWorkflowId value="68f14fe1-978e-4568-9539-cef724663d9e" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
