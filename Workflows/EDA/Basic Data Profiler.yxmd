@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.1">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="150" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText><![CDATA[Customer Input Data ]]></AnnotationText>
+          <DefaultAnnotationText>EDACustomerData.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="unique_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="transaction_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="date" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="year" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="month" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="day" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="dow" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="quarter" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="customer_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="product_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="product_name" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="category_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="category_name" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="parent_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="parent_name" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="product_count" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="site_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="site_name" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="address" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="city" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="zip" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="latitude" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="longitude" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="site_status" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="revenue" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="gross_profit" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="gp_margin" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="costs" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="units" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="state_province_code" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BasicDataProfile.BasicDataProfile">
+        <Position x="330" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Limit_UniqueCount>100</Limit_UniqueCount>
+          <Limit_UniqueValuesSize>500</Limit_UniqueValuesSize>
+          <IsMetric value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Added basic data profiler</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBasicDataProfile" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="510" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ADMINU~1\AppData\Local\Temp\2\Engine_7792_880d4905ad85344ab46916ac8abfe618_\Engine_7792_e1a81bb7bc48084496b83126d3ea36f6~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Basic Data Profiler</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="bb2482b6-eb6d-460b-92ae-c699be9cdc7c" />
+      <Telemetry>
+        <PreviousWorkflowId value="5fa3cde5-91bd-4752-9ffc-1b39b96f3060" />
+        <OriginWorkflowId value="5fa3cde5-91bd-4752-9ffc-1b39b96f3060" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
