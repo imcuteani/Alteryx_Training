@@ -528,6 +528,26 @@ day = DateTimeDay([dat...</DefaultAnnotationText>
         </Annotation>
       </Properties>
     </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="726" y="186" width="144" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>States Data</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>States Data</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes />
+    </Node>
     <Node ToolID="34">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
         <Position x="654" y="258" width="100" height="40" />
@@ -547,26 +567,6 @@ day = DateTimeDay([dat...</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
-    </Node>
-    <Node ToolID="33">
-      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="666" y="186" width="144" height="24" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Caption>States Data</Caption>
-          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
-          <Disabled value="False" />
-          <Folded value="True" />
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <AnnotationText>States Data</AnnotationText>
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <ChildNodes />
     </Node>
     <Node ToolID="35">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">

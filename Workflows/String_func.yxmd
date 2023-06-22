@@ -2,36 +2,8 @@
 <AlteryxDocument yxmdVer="2023.1">
   <Nodes>
     <Node ToolID="1">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="510" y="102" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <TempFile>C:\Users\ADMINU~1\AppData\Local\Temp\2\Engine_6572_fb99911ae5c47e4ba6bb1f1e089a6f2d_\Engine_6572_9d4854140dbe794d884c75cfb501373c~.yxdb</TempFile>
-          <TempFileDataProfiling />
-          <Layout>
-            <ViewMode>Single</ViewMode>
-            <ViewSize value="100" />
-            <View1>
-              <DefaultTab>Profile</DefaultTab>
-              <Hints>
-                <Table />
-              </Hints>
-            </View1>
-            <View2 />
-          </Layout>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
-    </Node>
-    <Node ToolID="2">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="102" y="102" />
+        <Position x="138" y="78" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -51,9 +23,9 @@
           </FormatSpecificOptions>
         </Configuration>
         <Annotation DisplayMode="0">
-          <Name />
-          <AnnotationText><![CDATA[TecaPoSData ]]></AnnotationText>
-          <DefaultAnnotationText>tecaPosSmall.csv</DefaultAnnotationText>
+          <Name>Customer Input Data</Name>
+          <AnnotationText>Customer Input Data</AnnotationText>
+          <DefaultAnnotationText>Customer Input Data</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
         <Dependencies>
@@ -90,63 +62,86 @@
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
     </Node>
     <Node ToolID="3">
-      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="270" y="102" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="450" y="54" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <SummarizeFields>
-            <SummarizeField field="revenue" action="CountDistinct" rename="CountDistinct_revenue" />
-            <SummarizeField field="product_count" action="GroupBy" rename="product_count" />
-            <SummarizeField field="gross_profit" action="Max" rename="Max_gross_profit" />
-            <SummarizeField field="product_name" action="GroupBy" rename="product_name" />
-          </SummarizeFields>
+          <TempFile>C:\Users\ADMINU~1\AppData\Local\Temp\2\Engine_6888_f0b91a792669b34b8e523abf8212bba4_\Engine_6888_b162e1035bd0344e9d85e8cd1be9707f~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
         </Configuration>
         <Annotation DisplayMode="0">
-          <Name>Summarize</Name>
-          <AnnotationText><![CDATA[Summarize tool for Count of Gross profits ]]></AnnotationText>
+          <Name />
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
       </Properties>
-      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
     </Node>
-    <Node ToolID="4">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.RunningTotal.RunningTotal">
-        <Position x="390" y="102" />
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="246" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <GroupByFields>
-            <Field field="CountDistinct_revenue" />
-            <Field field="product_count" />
-          </GroupByFields>
-          <RunningTotalFields>
-            <Field field="CountDistinct_revenue" />
-          </RunningTotalFields>
+          <FormulaFields>
+            <FormulaField expression="Left([zip], 3)" field="Customized_ZipCode" size="1073741823" type="V_WString" />
+          </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="0">
-          <Name>Running Total</Name>
-          <AnnotationText>Total Valuation based on Product Revenue and Product Count</AnnotationText>
-          <DefaultAnnotationText>Running Total</DefaultAnnotationText>
+          <Name />
+          <AnnotationText><![CDATA[Customized_ZipCode 
+]]></AnnotationText>
+          <DefaultAnnotationText><![CDATA[Customized_ZipCode = Left([zip], 3)
+]]></DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRunningTotal" />
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="354" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Trim([category_name],&quot;-&quot;) " field="Trim_category" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Trim_category = Trim([category_name],"-") 
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
     </Node>
   </Nodes>
   <Connections>
     <Connection>
-      <Origin ToolID="2" Connection="Output" />
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
       <Destination ToolID="3" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="3" Connection="Output" />
-      <Destination ToolID="4" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="4" Connection="Output" />
-      <Destination ToolID="1" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>
@@ -169,7 +164,7 @@
     <LayoutType>Horizontal</LayoutType>
     <MetaInfo>
       <NameIsFileName value="True" />
-      <Name>Summarize</Name>
+      <Name>String_func</Name>
       <Description />
       <RootToolName />
       <ToolVersion />
@@ -184,10 +179,10 @@
         <Description />
         <File />
       </Example>
-      <WorkflowId value="855602b0-cc30-446c-b796-843b409bdd5d" />
+      <WorkflowId value="4b299eb2-580e-4615-b7d2-5b226fce460e" />
       <Telemetry>
-        <PreviousWorkflowId value="12c18d15-8f43-4e9d-823e-a25247affe70" />
-        <OriginWorkflowId value="12c18d15-8f43-4e9d-823e-a25247affe70" />
+        <PreviousWorkflowId value="a54d7b82-5c9a-465f-8891-93942f140651" />
+        <OriginWorkflowId value="a54d7b82-5c9a-465f-8891-93942f140651" />
       </Telemetry>
       <PlatformWorkflowId value="" />
     </MetaInfo>
