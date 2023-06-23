@@ -3,12 +3,12 @@
   <Nodes>
     <Node ToolID="5">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="54" y="66" />
+        <Position x="54" y="116" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <Passwords />
-          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv</File>
+          <File FileFormat="0" OutputFileName="" RecordLimit="" SearchSubDirs="False">C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv</File>
           <FormatSpecificOptions>
             <HeaderRow>True</HeaderRow>
             <IgnoreErrors>False</IgnoreErrors>
@@ -29,9 +29,6 @@ This is the first step.</AnnotationText>
           <DefaultAnnotationText>tecaPosSmall.csv</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="unique_id" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\tecaPosSmall.csv" type="V_String" />
@@ -64,17 +61,17 @@ This is the first step.</AnnotationText>
     </Node>
     <Node ToolID="7">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="198" y="66" />
+        <Position x="198" y="116" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <OrderChanged value="False" />
           <CommaDecimal value="False" />
           <SelectFields>
-            <SelectField field="revenue" selected="True" type="Float" size="4" />
-            <SelectField field="gross_profit" selected="True" type="Float" size="4" />
-            <SelectField field="costs" selected="True" type="Float" size="4" />
-            <SelectField field="units" selected="True" type="Float" size="4" />
+            <SelectField field="revenue" selected="True" size="4" type="Float" />
+            <SelectField field="gross_profit" selected="True" size="4" type="Float" />
+            <SelectField field="costs" selected="True" size="4" type="Float" />
+            <SelectField field="units" selected="True" size="4" type="Float" />
             <SelectField field="*Unknown" selected="True" />
           </SelectFields>
         </Configuration>
@@ -115,7 +112,7 @@ This is the first step.</AnnotationText>
     </Node>
     <Node ToolID="8">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
-        <Position x="318" y="66" />
+        <Position x="318" y="116" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -164,7 +161,7 @@ MM/dd/yy</DefaultAnnotationText>
     </Node>
     <Node ToolID="9">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="462" y="66" />
+        <Position x="462" y="116" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -223,7 +220,7 @@ day = DateTimeDay([dat...</DefaultAnnotationText>
     </Node>
     <Node ToolID="10">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="606" y="66" />
+        <Position x="606" y="116" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -306,7 +303,7 @@ day = DateTimeDay([dat...</DefaultAnnotationText>
     </Node>
     <Node ToolID="11">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="714" y="66" />
+        <Position x="714" y="116" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -389,7 +386,7 @@ day = DateTimeDay([dat...</DefaultAnnotationText>
     </Node>
     <Node ToolID="12">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="1026" y="210" />
+        <Position x="1026" y="260" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -417,7 +414,7 @@ day = DateTimeDay([dat...</DefaultAnnotationText>
     </Node>
     <Node ToolID="13">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-        <Position x="810" y="210" />
+        <Position x="810" y="260" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -471,7 +468,7 @@ day = DateTimeDay([dat...</DefaultAnnotationText>
     </Node>
     <Node ToolID="14">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="918" y="210" />
+        <Position x="918" y="260" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -506,7 +503,7 @@ day = DateTimeDay([dat...</DefaultAnnotationText>
     </Node>
     <Node ToolID="17">
       <GuiSettings>
-        <Position x="870" y="66" />
+        <Position x="870" y="116" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -565,12 +562,12 @@ day = DateTimeDay([dat...</DefaultAnnotationText>
     </Node>
     <Node ToolID="18">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="870" y="138" />
+        <Position x="870" y="188" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <Passwords />
-          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\adminuser\Downloads\Alteryx\workflows_data\states.csv</File>
+          <File FileFormat="0" OutputFileName="" RecordLimit="" SearchSubDirs="False">C:\Users\adminuser\Downloads\Alteryx\workflows_data\states.csv</File>
           <FormatSpecificOptions>
             <HeaderRow>True</HeaderRow>
             <IgnoreErrors>False</IgnoreErrors>
@@ -589,9 +586,6 @@ day = DateTimeDay([dat...</DefaultAnnotationText>
           <DefaultAnnotationText>states.csv</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="postal_code" size="254" source="File: C:\Users\adminuser\Downloads\Alteryx\workflows_data\states.csv" type="V_String" />
@@ -605,7 +599,7 @@ day = DateTimeDay([dat...</DefaultAnnotationText>
     </Node>
     <Node ToolID="19">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="954" y="138" />
+        <Position x="954" y="188" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -633,7 +627,7 @@ day = DateTimeDay([dat...</DefaultAnnotationText>
     </Node>
     <Node ToolID="20">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1062" y="138" />
+        <Position x="1062" y="188" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -659,7 +653,7 @@ day = DateTimeDay([dat...</DefaultAnnotationText>
     </Node>
     <Node ToolID="22">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="1146" y="66" />
+        <Position x="1146" y="116" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -674,8 +668,8 @@ day = DateTimeDay([dat...</DefaultAnnotationText>
               <OrderChanged value="False" />
               <CommaDecimal value="False" />
               <SelectFields>
-                <SelectField field="Right_postal_code" selected="False" input="Right_" />
-                <SelectField field="Right_zip" selected="False" rename="Right_zip" input="Right_" />
+                <SelectField field="Right_postal_code" input="Right_" selected="False" />
+                <SelectField field="Right_zip" input="Right_" rename="Right_zip" selected="False" />
                 <SelectField field="*Unknown" selected="True" />
               </SelectFields>
             </Configuration>
@@ -774,7 +768,7 @@ day = DateTimeDay([dat...</DefaultAnnotationText>
     </Node>
     <Node ToolID="26">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="1338" y="54" />
+        <Position x="1338" y="104" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -827,7 +821,7 @@ day = DateTimeDay([dat...</DefaultAnnotationText>
     </Node>
     <Node ToolID="27">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="1482" y="54" />
+        <Position x="1482" y="104" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -853,18 +847,104 @@ day = DateTimeDay([dat...</DefaultAnnotationText>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
     </Node>
-    <Node ToolID="28">
-      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
-        <Position x="0" y="0" width="59" height="59" />
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="18" y="70" width="636" height="32" />
       </GuiSettings>
       <Properties>
-        <Configuration />
+        <Configuration>
+          <Text>This workflow was generated by applying the interface tool changes to the primary workflow.</Text>
+          <Justification Justification="0" />
+          <Shape shape="0" />
+          <FillColor name="White" />
+          <TextColor name="Black" />
+        </Configuration>
         <Annotation DisplayMode="0">
           <Name />
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
       </Properties>
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="18" y="18" width="636" height="48" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Debug Workflow:
+etl5.yxwz</Text>
+          <Justification Justification="3" />
+          <Shape shape="0" />
+          <FillColor b="208" g="113" r="10" />
+          <TextColor name="White" />
+          <Font name="Arial" size="14.25" style="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="498" y="28" width="141" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Debug Log</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="31">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="523" y="77" width="500" height="163" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text><![CDATA[Original File: etl5.yxwz
+
+App Values:
+<WizardValues>
+<Module>C:\Users\adminuser\Documents\Alteryx_Training\Analytic Apps\etl5.yxwz</Module>
+</WizardValues>
+
+
+Actions Log:
+Started running  at Fri Jun 23 12:07:40 2023
+
+]]></Text>
+              <Justification Justification="3" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
     </Node>
   </Nodes>
   <Connections>
@@ -968,9 +1048,9 @@ day = DateTimeDay([dat...</DefaultAnnotationText>
         <Description />
         <File />
       </Example>
-      <WorkflowId value="fc642f01-796d-49dc-9734-383015360a8e" />
+      <WorkflowId value="f8f60cc5-26d0-4b19-ba6e-085056c06ee3" />
       <Telemetry>
-        <PreviousWorkflowId value="24ac28bf-2f68-4d68-9dbd-7180c1846f96" />
+        <PreviousWorkflowId value="fc642f01-796d-49dc-9734-383015360a8e" />
         <OriginWorkflowId value="24ac28bf-2f68-4d68-9dbd-7180c1846f96" />
       </Telemetry>
       <PlatformWorkflowId value="" />
@@ -984,8 +1064,8 @@ day = DateTimeDay([dat...</DefaultAnnotationText>
         <Question>
           <Type>Tab</Type>
           <Description>Questions</Description>
-          <Name>Tab (28)</Name>
-          <ToolId value="28" />
+          <Name>Tab (33)</Name>
+          <ToolId value="33" />
           <Questions />
         </Question>
       </Questions>

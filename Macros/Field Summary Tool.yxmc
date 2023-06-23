@@ -2,56 +2,32 @@
 <AlteryxDocument yxmdVer="2023.1">
   <Nodes>
     <Node ToolID="1">
-      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
-        <Position x="0" y="0" width="59" height="59" />
-      </GuiSettings>
-      <Properties>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-    </Node>
-    <Node ToolID="2">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
-        <Position x="174" y="102" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="138" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <UseFileInput value="True" />
-          <Name>Customer Input Data</Name>
-          <Abbrev />
-          <ShowFieldMap value="True" />
-          <Optional value="False" />
-          <FileInput>
-            <Configuration>
-              <Passwords />
-              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv</File>
-              <FormatSpecificOptions>
-                <HeaderRow>True</HeaderRow>
-                <IgnoreErrors>False</IgnoreErrors>
-                <AllowShareWrite>False</AllowShareWrite>
-                <ImportLine>1</ImportLine>
-                <FieldLen>254</FieldLen>
-                <SingleThreadRead>False</SingleThreadRead>
-                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
-                <Delimeter>,</Delimeter>
-                <QuoteRecordBreak>False</QuoteRecordBreak>
-                <CodePage>28591</CodePage>
-              </FormatSpecificOptions>
-            </Configuration>
-          </FileInput>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <AnnotationText>Input</AnnotationText>
+          <AnnotationText>Customer EDA Data</AnnotationText>
           <DefaultAnnotationText>EDACustomerData.csv</DefaultAnnotationText>
-          <Left value="True" />
+          <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="unique_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
@@ -87,204 +63,15 @@
           </RecordInfo>
         </MetaInfo>
       </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
     </Node>
-    <Node ToolID="5">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="330" y="102" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <OrderChanged value="False" />
-          <CommaDecimal value="False" />
-          <SelectFields>
-            <SelectField field="unique_id" selected="True" />
-            <SelectField field="transaction_id" selected="True" />
-            <SelectField field="date" selected="True" type="Date" size="10" />
-            <SelectField field="year" selected="True" type="Int16" size="2" />
-            <SelectField field="month" selected="True" type="Int16" size="2" />
-            <SelectField field="day" selected="True" type="Int16" size="2" />
-            <SelectField field="dow" selected="True" />
-            <SelectField field="quarter" selected="True" />
-            <SelectField field="customer_id" selected="True" />
-            <SelectField field="product_id" selected="True" />
-            <SelectField field="product_name" selected="True" />
-            <SelectField field="category_id" selected="True" />
-            <SelectField field="category_name" selected="True" />
-            <SelectField field="parent_id" selected="True" />
-            <SelectField field="parent_name" selected="True" />
-            <SelectField field="product_count" selected="True" />
-            <SelectField field="site_id" selected="True" />
-            <SelectField field="site_name" selected="True" />
-            <SelectField field="address" selected="True" />
-            <SelectField field="city" selected="True" />
-            <SelectField field="zip" selected="True" />
-            <SelectField field="latitude" selected="True" />
-            <SelectField field="longitude" selected="True" />
-            <SelectField field="site_status" selected="True" />
-            <SelectField field="revenue" selected="True" type="Float" size="4" />
-            <SelectField field="gross_profit" selected="True" type="Float" size="4" />
-            <SelectField field="gp_margin" selected="True" type="Float" size="4" />
-            <SelectField field="costs" selected="True" />
-            <SelectField field="units" selected="True" />
-            <SelectField field="state_province_code" selected="True" />
-            <SelectField field="*Unknown" selected="False" />
-          </SelectFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <AnnotationText><![CDATA[Change Data Type ]]></AnnotationText>
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-        <MetaInfo connection="Output">
-          <RecordInfo>
-            <Field name="unique_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="transaction_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="date" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Date" />
-            <Field name="year" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Int16" />
-            <Field name="month" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Int16" />
-            <Field name="day" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Int16" />
-            <Field name="dow" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="quarter" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="customer_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="product_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="product_name" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="category_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="category_name" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="parent_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="parent_name" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="product_count" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="site_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="site_name" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="address" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="city" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="zip" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="latitude" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="longitude" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="site_status" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="revenue" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Float" />
-            <Field name="gross_profit" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Float" />
-            <Field name="gp_margin" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Float" />
-            <Field name="costs" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="units" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="state_province_code" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-          </RecordInfo>
-        </MetaInfo>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-    </Node>
-    <Node ToolID="8">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="462" y="90" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Expression>[revenue] &gt;= 10 AND [gp_margin] &gt;= 0.5</Expression>
-          <Mode>Custom</Mode>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <AnnotationText>Filtered where Revenue &amp; Product Margin is greater than interpolation value</AnnotationText>
-          <DefaultAnnotationText>[revenue] &gt;= 10 AND [gp_margin] &gt;= 0.5</DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-        <MetaInfo connection="True">
-          <RecordInfo>
-            <Field name="unique_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="transaction_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="date" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Date" />
-            <Field name="year" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Int16" />
-            <Field name="month" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Int16" />
-            <Field name="day" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Int16" />
-            <Field name="dow" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="quarter" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="customer_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="product_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="product_name" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="category_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="category_name" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="parent_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="parent_name" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="product_count" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="site_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="site_name" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="address" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="city" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="zip" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="latitude" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="longitude" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="site_status" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="revenue" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Float" />
-            <Field name="gross_profit" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Float" />
-            <Field name="gp_margin" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Float" />
-            <Field name="costs" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="units" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="state_province_code" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-          </RecordInfo>
-        </MetaInfo>
-        <MetaInfo connection="False">
-          <RecordInfo>
-            <Field name="unique_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="transaction_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="date" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Date" />
-            <Field name="year" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Int16" />
-            <Field name="month" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Int16" />
-            <Field name="day" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Int16" />
-            <Field name="dow" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="quarter" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="customer_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="product_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="product_name" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="category_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="category_name" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="parent_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="parent_name" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="product_count" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="site_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="site_name" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="address" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="city" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="zip" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="latitude" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="longitude" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="site_status" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="revenue" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Float" />
-            <Field name="gross_profit" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Float" />
-            <Field name="gp_margin" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Float" />
-            <Field name="costs" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="units" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-            <Field name="state_province_code" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
-          </RecordInfo>
-        </MetaInfo>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
-    </Node>
-    <Node ToolID="9">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="630" y="78" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Name>Revenue &amp; Gross Profit Value</Name>
-          <Abbrev />
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <AnnotationText>Output</AnnotationText>
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
-    </Node>
-    <Node ToolID="10">
+    <Node ToolID="2">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="654" y="186" />
+        <Position x="474" y="138" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\ADMINU~1\AppData\Local\Temp\2\Engine_1292_c3b6c1ae6b1fb84f9e4c7f10a81fa2cc_\Engine_1292_90796927ca128c49a3bb1cfc223b84c0~.yxdb</TempFile>
+          <TempFile>C:\Users\ADMINU~1\AppData\Local\Temp\2\Engine_6248_8eb0f8a0a6e6164284e89b82f00a5a3d_\Engine_6248_ef827bce294ab944a840649143e20e41~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -306,23 +93,239 @@
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
     </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="198" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="unique_id" selected="True" />
+            <SelectField field="transaction_id" selected="True" />
+            <SelectField field="date" selected="True" type="Date" size="10" />
+            <SelectField field="year" selected="True" type="Int16" size="2" />
+            <SelectField field="month" selected="True" type="Int16" size="2" />
+            <SelectField field="day" selected="True" type="Int16" size="2" />
+            <SelectField field="dow" selected="True" />
+            <SelectField field="quarter" selected="True" type="Int16" size="2" />
+            <SelectField field="customer_id" selected="True" />
+            <SelectField field="product_id" selected="True" />
+            <SelectField field="product_name" selected="True" />
+            <SelectField field="category_id" selected="True" />
+            <SelectField field="category_name" selected="True" />
+            <SelectField field="parent_id" selected="True" />
+            <SelectField field="parent_name" selected="True" />
+            <SelectField field="product_count" selected="True" />
+            <SelectField field="site_id" selected="True" />
+            <SelectField field="site_name" selected="True" />
+            <SelectField field="address" selected="True" />
+            <SelectField field="city" selected="True" />
+            <SelectField field="zip" selected="True" />
+            <SelectField field="latitude" selected="True" type="Float" size="4" />
+            <SelectField field="longitude" selected="True" type="Float" size="4" />
+            <SelectField field="site_status" selected="True" />
+            <SelectField field="revenue" selected="True" type="Float" size="4" />
+            <SelectField field="gross_profit" selected="True" type="Float" size="4" />
+            <SelectField field="gp_margin" selected="True" type="Float" size="4" />
+            <SelectField field="costs" selected="True" type="Float" size="4" />
+            <SelectField field="units" selected="True" />
+            <SelectField field="state_province_code" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Data type conversion</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="unique_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="transaction_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="date" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Date" />
+            <Field name="year" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Int16" />
+            <Field name="month" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Int16" />
+            <Field name="day" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Int16" />
+            <Field name="dow" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="quarter" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Int16" />
+            <Field name="customer_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="product_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="product_name" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="category_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="category_name" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="parent_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="parent_name" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="product_count" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="site_id" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="site_name" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="address" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="city" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="zip" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="latitude" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Float" />
+            <Field name="longitude" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Float" />
+            <Field name="site_status" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="revenue" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Float" />
+            <Field name="gross_profit" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Float" />
+            <Field name="gp_margin" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Float" />
+            <Field name="costs" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Float" />
+            <Field name="units" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+            <Field name="state_province_code" size="254" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings>
+        <Position x="330" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Select Fields">unique_id=False,transaction_id=False,date=False,year=False,month=False,day=False,dow=False,quarter=False,customer_id=False,product_id=False,product_name=False,category_id=False,category_name=True,parent_id=False,parent_name=False,product_count=False,site_id=False,site_name=False,address=False,city=False,zip=False,latitude=False,longitude=False,site_status=False,revenue=True,gross_profit=True,gp_margin=True,costs=True,units=False,state_province_code=True</Value>
+          <Value name="Sample Data">False</Value>
+          <Value name="Number">True</Value>
+          <Value name="NNumber">5000</Value>
+          <Value name="Percent">False</Value>
+          <Value name="NPercent">10</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText><![CDATA[Field Summary to histogram of Cost, gross profit and gross margin and revenue. ]]></AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Interactive">
+          <RecordInfo>
+            <Field name="Text" size="1073741823" source="Report:Text:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Reports">
+          <RecordInfo>
+            <Field name="Desc" size="64" source="Formula: (Multiple Sources)" type="V_String" />
+            <Field name="Report" size="1073741823" source="Report:Table:Basic:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Name" size="19" source="Summarize: GroupBy - Name" type="String" />
+            <Field name="Field Category" size="64" source="Formula: (Multiple Sources)" type="String" />
+            <Field name="Min" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Float" />
+            <Field name="Max" source="File: C:\Users\adminuser\Documents\Alteryx_Training\Workflows\Output\EDACustomerData.csv" type="Float" />
+            <Field name="Median" source="Summarize: Median - Value" type="Double" />
+            <Field name="Std. Dev." source="Summarize: StdDev - Value" type="Double" />
+            <Field name="Percent Missing" source="Formula: (Multiple Sources)" type="Double" />
+            <Field name="Unique Values" source="Summarize: Count - Name" type="Int64" />
+            <Field name="Mean" source="Summarize: Avg - Value" type="Double" />
+            <Field name="Layout" size="1073741823" source="Report:Layout:" type="V_WString" />
+            <Field name="Remarks" size="1073741823" source="Summarize: Concat - Value" type="V_WString" />
+            <Field name="Shortest_Value" size="1073741823" source="Summarize: Shortest - Value" type="V_WString" />
+            <Field name="Longest_Value" size="1073741823" source="Summarize: Longest - Value" type="V_WString" />
+            <Field name="MinValueCount" source="Summarize: Count - Name" type="Int64" />
+            <Field name="MaxValueCount" source="Summarize: Count - Name" type="Int64" />
+            <Field name="Latest Date" size="64" source="Formula: DateTimeFormat([Max_Value],&quot;%m/%d/%Y %H:00&quot;)" type="String" />
+            <Field name="Earliest Date" size="64" source="Formula: DateTimeFormat([Min_Value],&quot;%m/%d/%Y %H:00&quot;)" type="String" />
+            <Field name="Interval" size="64" source="Formula: (Multiple Sources)" type="V_WString" />
+            <Field name="ObjType" size="12" source="Summarize: GroupBy - ObjType" type="String" />
+            <Field name="Avg_AreaSqMi" source="Summarize: Avg - AreaSqMi" type="Double" />
+            <Field name="Avg_LengthMi" source="Summarize: Avg - LengthMi" type="Double" />
+            <Field name="Avg_NumPoints" source="Summarize: Avg - NumPoints" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="Predictive Tools\Field_Summary_Report.yxmc" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="426" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ADMINU~1\AppData\Local\Temp\2\Engine_6248_8eb0f8a0a6e6164284e89b82f00a5a3d_\Engine_6248_c065b2ae38ce584cbfe1842eb2e5ef65~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="426" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ADMINU~1\AppData\Local\Temp\2\Engine_6248_8eb0f8a0a6e6164284e89b82f00a5a3d_\Engine_6248_b4e2b0767f12714096d39a1770883442~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
   </Nodes>
   <Connections>
     <Connection>
-      <Origin ToolID="2" Connection="Output" />
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Field Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Reports" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
       <Destination ToolID="5" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="5" Connection="Output" />
-      <Destination ToolID="8" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="8" Connection="True" />
-      <Destination ToolID="9" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="8" Connection="False" />
-      <Destination ToolID="10" Connection="Input" />
+      <Origin ToolID="4" Connection="Interactive" />
+      <Destination ToolID="6" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>
@@ -343,23 +346,9 @@
     <ShowConnectionStatusOnlyWhenRunning value="True" />
     <ZoomLevel value="0" />
     <LayoutType>Horizontal</LayoutType>
-    <Constants>
-      <Constant>
-        <Namespace>Question</Namespace>
-        <Name>Macro Input (2)</Name>
-        <Value />
-        <IsNumeric value="False" />
-      </Constant>
-      <Constant>
-        <Namespace>Question</Namespace>
-        <Name>Macro Output (9)</Name>
-        <Value />
-        <IsNumeric value="False" />
-      </Constant>
-    </Constants>
     <MetaInfo>
       <NameIsFileName value="True" />
-      <Name>Customer_Profit</Name>
+      <Name>Field Summary Tool</Name>
       <Description />
       <RootToolName />
       <ToolVersion />
@@ -374,10 +363,10 @@
         <Description />
         <File />
       </Example>
-      <WorkflowId value="32d47a4f-9df4-4e4c-84f5-c7976983a44d" />
+      <WorkflowId value="6f38b49b-4db8-4a68-aeb7-f592abbfd206" />
       <Telemetry>
-        <PreviousWorkflowId value="" />
-        <OriginWorkflowId value="32d47a4f-9df4-4e4c-84f5-c7976983a44d" />
+        <PreviousWorkflowId value="8545fcbb-afab-42a6-aea0-41723697c215" />
+        <OriginWorkflowId value="db96c412-6fe3-4a2f-b7f8-ef03688137e9" />
       </Telemetry>
       <PlatformWorkflowId value="" />
     </MetaInfo>
@@ -390,22 +379,9 @@
         <Question>
           <Type>Tab</Type>
           <Description>Questions</Description>
-          <Name>Tab (1)</Name>
-          <ToolId value="1" />
-          <Questions>
-            <Question>
-              <Type>MacroInput</Type>
-              <Description>Macro Input (2)</Description>
-              <Name>Macro Input (2)</Name>
-              <ToolId value="2" />
-            </Question>
-            <Question>
-              <Type>MacroOutput</Type>
-              <Description>Macro Output (9)</Description>
-              <Name>Macro Output (9)</Name>
-              <ToolId value="9" />
-            </Question>
-          </Questions>
+          <Name>Tab (7)</Name>
+          <ToolId value="7" />
+          <Questions />
         </Question>
       </Questions>
       <ModuleType>Macro</ModuleType>
@@ -418,9 +394,10 @@
       <Wiz_CustomGraphic value="False" />
       <Wiz_ShowOutput value="True" />
       <Wiz_OpenOutputTools>
-        <Tool ToolId="2" Selected="True" />
-        <Tool ToolId="9" Selected="True" />
-        <Tool ToolId="10" Selected="False" />
+        <Tool ToolId="2" Selected="False" />
+        <Tool ToolId="4" Selected="True" />
+        <Tool ToolId="5" Selected="False" />
+        <Tool ToolId="6" Selected="False" />
       </Wiz_OpenOutputTools>
       <Wiz_OutputMessage />
       <Wiz_NoOutputFilesMessage />

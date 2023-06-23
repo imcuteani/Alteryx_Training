@@ -284,19 +284,14 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\ADMINU~1\AppData\Local\Temp\2\Engine_1292_c3b6c1ae6b1fb84f9e4c7f10a81fa2cc_\Engine_1292_90796927ca128c49a3bb1cfc223b84c0~.yxdb</TempFile>
-          <TempFileDataProfiling />
           <Layout>
-            <ViewMode>Single</ViewMode>
-            <ViewSize value="100" />
             <View1>
-              <DefaultTab>Profile</DefaultTab>
               <Hints>
                 <Table />
               </Hints>
             </View1>
-            <View2 />
           </Layout>
+          <TempFile>C:\Users\ADMINU~1\AppData\Local\Temp\2\Engine_5100_c77eb961d558604eb1ae6315ee66ac09_\Engine_5100_692bbb899d6edd45b508f9aff841ada5~.yxdb</TempFile>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
