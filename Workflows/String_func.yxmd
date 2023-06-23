@@ -63,11 +63,11 @@
     </Node>
     <Node ToolID="3">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="450" y="54" />
+        <Position x="582" y="42" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\ADMINU~1\AppData\Local\Temp\2\Engine_6888_f0b91a792669b34b8e523abf8212bba4_\Engine_6888_b162e1035bd0344e9d85e8cd1be9707f~.yxdb</TempFile>
+          <TempFile>C:\Users\ADMINU~1\AppData\Local\Temp\2\Engine_412_1d95f5f5fcfe05478425dcca8da2599f_\Engine_412_c5a01f2bb18d8c43a70055a00fa7e0f8~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -129,6 +129,25 @@
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
     </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="474" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="ToString([zip], 0)" field="zip_string" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[zip_string = ToString([zip], 0)
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
   </Nodes>
   <Connections>
     <Connection>
@@ -141,6 +160,10 @@
     </Connection>
     <Connection>
       <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
       <Destination ToolID="3" Connection="Input" />
     </Connection>
   </Connections>
